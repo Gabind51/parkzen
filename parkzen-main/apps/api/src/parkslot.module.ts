@@ -9,6 +9,7 @@ import { ParkSlotRepository } from './domain/interface/ParkSlotRepository.interf
 import { ParkSlotController } from './infrastructure/controller/parkslot.controller';
 import { CreateParkSlot } from './domain/services/CreateParkSlot.service';
 import { ListParkSlot } from './domain/services/ListParkSlot.service';
+import { DeleteParkSlot } from './domain/services/DeleteParkSlot.service';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { ListParkSlot } from './domain/services/ListParkSlot.service';
     { provide: ParkSlotRepository, useClass: MongodbParkSlotRepository },
     CreateParkSlot,
     ListParkSlot,
+    DeleteParkSlot,
   ],
 })
 export class ParkSlotModule {}
