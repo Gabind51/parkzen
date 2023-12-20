@@ -1,4 +1,4 @@
-import { Table } from "react-bootstrap";
+import {Button, Table} from "react-bootstrap";
 import {useEffect, useState} from "react";
 
 const apiUrl = process.env.REACT_APP_API_HOST;
@@ -44,6 +44,7 @@ function ListParkSlot() {
                 <th>Prénom</th>
                 <th>Nom</th>
                 <th>Prix pour une heure</th>
+                <th>Action</th>
             </tr>
             </thead>
             <tbody>
@@ -53,6 +54,7 @@ function ListParkSlot() {
                     <td>{parkSlot.firstName}</td>
                     <td>{parkSlot.lastName}</td>
                     <td>{parkSlot.priceForOneHour}</td>
+                    <td><Button>Supprimer</Button></td>
                 </tr>
             ))}
             </tbody>
